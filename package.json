@@ -1,0 +1,26 @@
+{
+  "name": "projectpiefit",
+  "version": "0.0.1",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "scripts": {
+    "checkpoint": "git add .  && git commit -F - && git push origin master ",
+    "pretest": "npm install",
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KennethRHMortensen/ProjectPieFit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "http-status-codes": "^2.1.4",
+    "mysql2": "^2.3.3-rc.0"
+  }
+}
