@@ -14,13 +14,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "",
-  "bugs": {
-    "url": ""
-  },
-  "homepage": "",
+  "license": "ISC",
+  "homepage": "https://github.com/KennethRHMortensen/ProjectPieFit#readme",
   "dependencies": {
     "http-status-codes": "^2.1.4",
-    "mysql2": "^2.3.3-rc.0"
+    "mysql2": "^2.3.3"
+  },
+  "bin": {
+    "projectpiefit": "bin/server.js"
+  },
+  "bugs": {
+    "url": "https://github.com/KennethRHMortensen/ProjectPieFit/issues"
   }
 }
