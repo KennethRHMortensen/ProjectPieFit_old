@@ -66,7 +66,8 @@ create table collection (
 	musclecategory varchar(20) not null,
 	difficultylevel int not null,
 	isdraft boolean not null default true,
-	primary key(collectionid)
+	primary key(collectionid),
+	foreign key(collectionid) references box(boxid)
 );
 
 drop table if exists card;
@@ -83,7 +84,8 @@ create table card (
 	backheading varchar(20) not null,
 	backsubheading varchar(30) not null,
 	isdraft boolean not null default true,
-	primary key(cardid)
+	primary key(cardid),
+	foreign key(cardid) references collection(collectionid)
 );
 
 drop table if exists exercise;
@@ -93,7 +95,8 @@ create table exercise (
 	description varchar(65) not null,
 	difficultylevel int not null,
 	video binary not null, /* Unsure about syntax for videos */
-	primary key(exerciseid)
+	primary key(exerciseid),
+	foreign key(exerciseid) references card(cardid)
 );
 
 drop table if exists text;
@@ -167,3 +170,8 @@ create table repsroundsstat (
 );
 
 /********** Enter data in Piefit Database Tables **********/
+
+/* Data for Box table */
+insert into box values('Home Edition', 2.8);
+insert into box values('Hiit Edition', 2.5);
+insert into box values('Power Edition', 3.6);
