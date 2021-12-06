@@ -6,20 +6,20 @@ export const menu = [
         url: "/"
     },
     {
-        text: "Page",
-        url: "/page1"
+        text: "Stats",
+        url: "/stats"
     },
     {
-        text: "Contacts",
-        url: "/contacts"
+        text: "Community",
+        url: "/community"
     },
 ,
     {
-        text: "New Contact",
-        url: "/contact"
+        text: "Support",
+        url: "/support"
     },
     {
-        text: "About",
-        url: "/about"
+        text: "Contact",
+        url: "/contact"
     }
 ];
