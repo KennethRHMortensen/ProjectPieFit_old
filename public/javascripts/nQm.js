@@ -28,6 +28,68 @@ export const strCharRepl = function(s, c, j) {
     }
     return ns;
 };
+
+let cardData = [{exercise: 'Fast Feet Steps', reps: '30'},{exercise: 'Plank Hip Dip', reps: '10'}]
+
+function printCardData(where) {
+    cardData.forEach(element => {
+        let tr = document.createElement('tr');
+        let exercise = document.createElement('td');
+        let reps = document.createElement('td');        
+    
+        exercise.appendChild(document.createTextNode(element.exercise));
+        reps.appendChild(document.createTextNode(element.reps));
+    
+        tr.append(exercise, reps);
+    
+        where.appendChild(tr);
+    
+    });
+ };
+    
+
+export const makeCard = function (where) {
+
+    
+    
+    let cardFront = document.createElement('div');
+    let cardBack = document.createElement('div');
+    let cardHeading = document.createElement('div');
+    let h2 = document.createElement('h2');
+    let pieFitLogo = document.createElement('img');
+    let table = document.createElement('table');
+    let tr = document.createElement('tr');
+    let exerciseName = document.createElement('th');    
+    let worktypeHeading = document.createElement('th');    
+    let cardFooter = document.createElement('div');
+    let instagramLogo = document.createElement('img');
+    let instagramText = document.createElement('p');
+
+    cardFront.setAttribute('class', 'card__front');
+    cardBack.setAttribute('class', 'card__back');
+    cardHeading.setAttribute('class', 'card__heading');
+    cardFooter.setAttribute('class', 'card__footer');  
+    
+    
+    cardFooter.append(instagramLogo, instagramText);
+    instagramText.appendChild(document.createTextNode('#PiefitSomething'));    
+    
+
+    worktypeHeading.appendChild(document.createTextNode('REPS'));
+    exerciseName.appendChild(document.createTextNode('EXERCISES'));
+    tr.append(exerciseName, worktypeHeading);
+    table.appendChild(tr);
+
+    printCardData(table);
+    
+    h2.appendChild(document.createTextNode('AMRAP 12'));
+    cardHeading.append(h2, pieFitLogo);
+    
+    cardFront.append(cardHeading, table, cardFooter);
+    $(where).appendChild(cardFront);
+
+}
+
 export const makeMenu = function (where) {
     let nav = document.createElement('nav');
     let h1 = document.createElement('h1');
